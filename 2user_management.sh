@@ -1,4 +1,5 @@
 #사용자 추가 및 비밀번호 지정
+#그냥 권한 막히면 sudo ... 사용
 sudo useradd newuser1
 sudo passwd newuser1
 
@@ -24,7 +25,7 @@ r-- = 4
 -w- = 2
 --x = 1
 
-chmod 644 파일명
+chmod 644 파일명 
 chmod u+x 파일명
 chmod u-x 파일명
 chmod u=r 파일명

@@ -111,7 +111,9 @@ find . -type f,d,l,b,c
 
 #find 와 grep 혼용 2가지 방식
 find . -name "*.txt" | xargs grep -rni "hello"
-find . -name "*.txt" -exec grep -rni "hello" \;
+find . -name "*.txt" -exec grep -rni "hello" {} \;
+find . -name "*.txt" -exec {} ./testFolder/ \;
+find . -name "*.txt" -exec echo {} \;
 
 # 타입은 파일, 이름은 first로 시작하고, 그 파일들 안에 "hello" 키워드가 들어간 문구, 문장 찾기
 find . -name "first*" -type f | xargs grep -rni "hello"

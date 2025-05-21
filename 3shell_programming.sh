@@ -1,4 +1,4 @@
-#쉘 스크립트 (확장자는 반드시 .sh)
+#쉘 스크립트 (확장자는 반드시 .sh) - 실행하기 위해선 x 권한 필요!
 touch myscript.sh
 nano myscripts.sh
 echo "hello world"
@@ -60,12 +60,12 @@ echo "Your count value is $count"
 file_count=0 #파일 카운팅 변수
 dir_count=0  #디렉토리 카운팅 변수
 
-for a in * #현재 디렉토리/파일 조회 기능 (a 라는 변수도 활성화)
+for a in *   #현재 디렉토리/파일 조회 기능 (a 라는 변수도 활성화)
 do
-    if [ -f "$a" ]; then # 만약, 변수 a가 -f (파일 타입)일 경우
-        let file_count=file_count+1 # 0 = 0 + 1
+    if [ -f "$a" ]; then             # 만약, 변수 a가 -f (파일 타입)일 경우
+        let file_count=file_count+1  # 0 = 0 + 1
     else
-        let dir_count=dir_count+1   # 0 = 0 + 1
+        let dir_count=dir_count+1    # 0 = 0 + 1
     fi
 done
 
